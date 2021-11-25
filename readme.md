@@ -40,6 +40,23 @@ GO
 
 ### Run the project
 
+ Confirm that in your local environment within this projects' root directory you have the file called **local.settings.json**. Within that file you should add the different configurations in order to connect to the DB, like this sample:
+
+```json
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "DB_NAME": "<Your_DB_Name>",
+    "DB_USER": "<Your_DB_User>",
+    "DB_PASSWORD": "<Your_DB_Password>",
+    "DB_HOST": "<Your_DB_Host>",
+    "DB_PORT": "<Your_DB_Port>"
+  }
+}
+```
+
 You can run the project with VS Code. Open the folder with VS Code, go to options panel at the top and click in "Run" then you can select "Start debugging" or "Run without debugging".
 
 If you have problems with some dependencies run:
